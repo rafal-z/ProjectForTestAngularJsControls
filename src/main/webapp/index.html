@@ -1,0 +1,45 @@
+<html ng-app="taskOrganization">
+    <head>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="app/style/boardPage.css"/>
+        <link rel="stylesheet" href="app/style/login.css"/>
+        <link rel="stylesheet" href="app/style/taskBar.css"/>
+        <link rel="stylesheet" href="app/style/editPopup.css"/>
+
+        <link rel="icon" type="image/jpeg" href="/app/images/favicon.png">
+    </head>
+    <body>
+        <div ng-controller="taskBarCtrl">
+            <ng-include src="'/myapp/app/views/taskBar.html'" ng-show="isAuthorization()"></ng-include>
+        </div>
+        <div ng-view=""></div>
+
+        <!--angular-->
+        <script src="https://code.angularjs.org/1.5.11/angular.js"></script>
+        <script src="https://code.angularjs.org/1.5.11/angular-route.js"></script>
+        <script src="https://code.angularjs.org/1.5.11/angular-cookies.js"></script>
+
+        <!--firebase for angular-->
+        <script src="https://cdn.jsdelivr.net/gh/firebase/firebase-bower@3.6.6/firebase.js"></script>
+        <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.js"></script>
+
+        <!--bootstrap-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+
+        <script src="app/lib/angular-drag-and-drop-lists.js"></script>
+        <script src="node_modules/right-click-menu/sarsha.contextmenu.js"></script>
+
+        <script src="app/app.js"></script>
+        <script src="app/scripts/controllers/loginCtrl.js"></script>
+        <script src="app/scripts/controllers/boardPageCtrl.js"></script>
+        <script src="app/scripts/controllers/listBoardCtrl.js"></script>
+        <script src="app/scripts/controllers/taskBarCtrl.js"></script>
+        <script src="app/scripts/controllers/editPopupCtrl.js"></script>
+        <script src="app/scripts/services/authService.js"></script>
+        <script src="app/scripts/services/dbService.js"></script>
+        <script src="app/scripts/dropdownMenuScript.js"></script>
+    </body>
+</html>
