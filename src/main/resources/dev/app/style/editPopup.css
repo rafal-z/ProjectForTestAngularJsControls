@@ -1,0 +1,19 @@
+.btn:hover{
+    cursor: pointer;
+}
+
+.button-cancel:hover{
+    background: #b9b9b9;
+}
+
+.edit-popup{
+    background: #edeff0;
+    border-radius: 3px;
+}
+
+.area-description{
+    width: 500px;
+    height: 100px;
+    min-width: 100px;
+    min-height: 50px;
+}

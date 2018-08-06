@@ -1,0 +1,8 @@
+<div id="board-page">
+    <div class="section">
+        <div class="table" ng-repeat="table in tables" ng-click="goToTable(table.$id)">
+            {{table.name}}
+        </div>
+    </div>
+    <div class="add-table" ng-click="addTable()">Dodaj tablicę...</div>
+</div>

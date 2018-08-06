@@ -1,0 +1,13 @@
+<div class="edit-popup">
+    <div class="modal-header">
+        <h3 class="modal-title">{{titleTicket}}</h3>
+    </div>
+    <div class="modal-body">
+        <span><b>Dodaj szczegółowy opis:</b></span><br>
+        <textarea class="area-description" ng-model="table.lists[listIndex].tickets[ticketIndex].description"/>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-success" type="button" ng-click="submit()">Zatwierdź</button>
+        <button class="btn button-cancel" type="button" ng-click="close()">Anuluj</button>
+    </div>
+</div>
