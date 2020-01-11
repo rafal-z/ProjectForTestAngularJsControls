@@ -2,18 +2,17 @@ angular
     .module('taskOrganization')
     .service('dbService', dbService);
 
-    function dbService($firebaseArray, authService) {
+    function dbService($firebaseArray) {
 
         var list = null;
 
-        this.destroyFirebaseArray = function () {
-            list.$ref().off();
-            list = null;
-        };
+        // this.destroyFirebaseArray = function () {
+        //     list.$ref().off();
+        //     list = null;
+        // };
 
         this.getFirebaseArray = function () {
             if (list === null) {
-                var userId = authService.getUid();
                 var ref = firebase.database().ref().child("users/boards/" + userId);
                 list = $firebaseArray(ref);
             }

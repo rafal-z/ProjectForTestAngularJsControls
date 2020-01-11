@@ -1,22 +1,14 @@
 angular
-    .module('taskOrganization', ['ngRoute', 'dndLists', 'shContextMenu', 'firebase', 'ngCookies', 'ui.bootstrap'])
+    .module('taskOrganization', ['ngRoute', 'firebase', 'ngCookies', 'ui.bootstrap'])
     .config(config);
 
 function config($routeProvider) {
     $routeProvider
-        .when('/board/:tableID', {
-            controller: 'boardPageCtrl',
-            templateUrl: '/myapp/app/views/boardPage.html'
-        })
         .when('/listboard', {
             controller: 'listBoardCtrl',
             templateUrl: '/myapp/app/views/listBoard.html'
         })
-        .when('/login', {
-            controller: 'loginCtrl',
-            templateUrl: '/myapp/app/views/login.html'
-        })
-        .otherwise({redirectTo: '/login'})
+        .otherwise({redirectTo: '/listboard'})
 }
 
 // Initialize the Firebase SDK

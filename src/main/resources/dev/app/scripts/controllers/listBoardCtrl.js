@@ -2,18 +2,13 @@ angular
     .module('taskOrganization')
     .controller('listBoardCtrl', listBoardCtrl);
 
-function listBoardCtrl($scope, $routeParams, $location, dbService, authService) {
+function listBoardCtrl($scope, $routeParams, $location, dbService) {
 
     initialization();
 
     function initialization() {
-        if(authService.isAuthorization()) {
-            $scope.tables = dbService.getFirebaseArray();
-            $scope.whichTable = $routeParams.tableID;
-        }
-        else{
-            $location.path('/login');
-        }
+        // $scope.tables = dbService.getFirebaseArray();
+        // $scope.whichTable = $routeParams.tableID;
     }
 
     $scope.goToTable = function (id) {

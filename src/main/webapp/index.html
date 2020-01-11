@@ -3,16 +3,11 @@
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="app/style/boardPage.css"/>
-        <link rel="stylesheet" href="app/style/login.css"/>
-        <link rel="stylesheet" href="app/style/taskBar.css"/>
-        <link rel="stylesheet" href="app/style/editPopup.css"/>
 
         <link rel="icon" type="image/jpeg" href="/app/images/favicon.png">
     </head>
     <body>
-        <div ng-controller="taskBarCtrl">
-            <ng-include src="'/myapp/app/views/taskBar.html'" ng-show="isAuthorization()"></ng-include>
-        </div>
+
         <div ng-view=""></div>
 
         <!--angular-->
