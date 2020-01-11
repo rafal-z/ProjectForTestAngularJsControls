@@ -6,7 +6,8 @@ function config($routeProvider) {
     $routeProvider
         .when('/listboard', {
             controller: 'listBoardCtrl',
-            templateUrl: '/myapp/app/views/listBoard.html'
+            // templateUrl: '/myapp/app/views/listBoard.html' // for project on wildfly (with backend)
+            templateUrl: '/app/views/listBoard.html' // for clean AngularJS
         })
         .otherwise({redirectTo: '/listboard'})
 }
