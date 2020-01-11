@@ -1,0 +1,6 @@
+GET http://localhost:8080/myapp/application/api
+Accept: */*
+Cache-Control: no-cache
+
+###
+
